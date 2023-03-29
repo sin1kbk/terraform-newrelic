@@ -3,7 +3,7 @@ resource "newrelic_one_dashboard_json" "postgres" {
 }
 
 module "integration_aws" {
-  count = var.newrelic_aws_account_id == null ? 0 : 1
+  count = var.newrelic_aws_account_id == "" ? 0 : 1
 
   source = "./modules/integration_aws"
   newrelic_aws_account_id = var.newrelic_aws_account_id
