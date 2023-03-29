@@ -6,5 +6,6 @@ module "integration_aws" {
   count = var.newrelic_aws_account_id == "" ? 0 : 1
 
   source = "./modules/integration_aws"
+  newrelic_account_id = var.newrelic_account_id
   newrelic_aws_account_id = var.newrelic_aws_account_id
 }
