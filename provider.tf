@@ -1,5 +1,5 @@
 terraform {
-  #backend "local" { path = ".tfstate" }
+  backend "local" { path = ".tfstate" }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
